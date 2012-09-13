@@ -68,7 +68,10 @@ class Devotee_acc {
 		}
 
 		// set theme url
-		$this->theme_url = $this->EE->config->item('theme_folder_url') . 'third_party/devotee/';
+		$this->theme_url	= defined( 'URL_THIRD_THEMES' )
+					? URL_THIRD_THEMES . '/devotee/'
+					: $this->EE->config->item('theme_folder_url') . 'third_party/devotee/';
+
 	}
 
 	/**
